@@ -4,11 +4,11 @@
   display: grid;
   place-items: center;
   grid-template-columns: auto auto;
-  grid-gap: 20px;
+  grid-gap: var(--spacing-large);
 }
 
 .code {
-  border-radius: 5px;
+  border-radius: var(--border-radius-large);
   background: rgba(234, 241, 251, 0.5);
   width: max-content;
   padding: 0.75rem;

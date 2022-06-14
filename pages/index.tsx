@@ -6,9 +6,16 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/oceanicNext';
 
 const primary = `
+HTML:
 <button class="kyper-btn primary">
    Primary
 </button>
+
+Rails: 
+<%= button_to "Primary", :method => "get", class: 'kyper-btn primary'%>
+
+React:
+<Button variant='primary'>Primary</Button>
 `;
 
 const primaryIcon = `
@@ -19,21 +26,30 @@ const primaryIcon = `
 `;
 
 const primaryDisabled = `
-<button class="kyper-btn primary icon" aria-disabled='true'>
+<button class="kyper-btn primary" aria-disabled='true'>
    Primary
 </button>
 `;
 
 const neutral = `
+HTML:
 <button class="kyper-btn neutral">
    Neutral
 </button>
+
+Rails:
+<%= button_to "Primary", home_index_path, :method => "get", class: 'kyper-btn neutral'%>
+
+React:
+<Button variant='neutral'>Neutral</Button>
 `;
+
 const neutralDisabled = `
 <button class="kyper-btn neutral" aria-disabled='true'>
    Neutral
 </button>
 `;
+
 const neutralIcon = `
 <button className="kyper-btn neutral icon">
   Neutral
@@ -42,10 +58,18 @@ const neutralIcon = `
 `;
 
 const transparent = `
+HTML:
 <button className="kyper-btn transparent">
   Neutral
 </button>
+
+Rails:
+<%= button_to "Primary", home_index_path, :method => "get", class: 'kyper-btn transparent'%>
+
+React:
+<Button variant='transparent'>Transparent</Button>
 `;
+
 const transparentDisabled = `
 <button className="kyper-btn transparent" aria-disabled='true'>
   Neutral
@@ -53,9 +77,16 @@ const transparentDisabled = `
 `;
 
 const destructive = `
+HTML:
 <button className="kyper-btn destructive">
   Neutral
 </button>
+
+Rails:
+<%= button_to "Primary", home_index_path, :method => "get", class: 'kyper-btn destructive'%>
+
+React:
+<Button variant='destructive'>Destructive</Button>
 `;
 
 const destructiveDisabled = `
@@ -95,54 +126,56 @@ const Home: NextPage = () => {
           )}
         </Highlight>
 
-        <button className="kyper-btn primary icon">
-          <svg>
-            <path
-              fill="white"
-              d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.067a6.933 6.933 0 100 13.866A6.933 6.933 0 008 1.067zm0 1.475a.48.48 0 01.48.48V7.52h4.498a.48.48 0 110 .96H8.48v4.498a.48.48 0 11-.96 0V8.48H3.022a.48.48 0 110-.96H7.52V3.022a.48.48 0 01.48-.48z"
-            />
-          </svg>
-          Primary
-        </button>
-        <Highlight
-          {...defaultProps}
-          theme={dracula}
-          code={primaryIcon}
-          language="jsx"
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
-              {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </pre>
-          )}
-        </Highlight>
-        <button className="kyper-btn primary" aria-disabled="true">
-          Primary
-        </button>
-        <Highlight
-          {...defaultProps}
-          theme={dracula}
-          code={primaryDisabled}
-          language="jsx"
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
-              {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </pre>
-          )}
-        </Highlight>
+        {/*<button className="kyper-btn primary icon">*/}
+        {/*  <svg>*/}
+        {/*    <path*/}
+        {/*      fill="white"*/}
+        {/*      d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.067a6.933 6.933 0 100 13.866A6.933 6.933 0 008 1.067zm0 1.475a.48.48 0 01.48.48V7.52h4.498a.48.48 0 110 .96H8.48v4.498a.48.48 0 11-.96 0V8.48H3.022a.48.48 0 110-.96H7.52V3.022a.48.48 0 01.48-.48z"*/}
+        {/*    />*/}
+        {/*  </svg>*/}
+        {/*  Primary*/}
+        {/*</button>*/}
+        {/*<Highlight*/}
+        {/*  {...defaultProps}*/}
+        {/*  theme={dracula}*/}
+        {/*  code={primaryIcon}*/}
+        {/*  language="jsx"*/}
+        {/*>*/}
+        {/*  {({ className, style, tokens, getLineProps, getTokenProps }) => (*/}
+        {/*    <pre className={className} style={style}>*/}
+        {/*      {tokens.map((line, i) => (*/}
+        {/*        <div key={i} {...getLineProps({ line, key: i })}>*/}
+        {/*          {line.map((token, key) => (*/}
+        {/*            <span key={key} {...getTokenProps({ token, key })} />*/}
+        {/*          ))}*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </pre>*/}
+        {/*  )}*/}
+        {/*</Highlight>*/}
+
+        {/*<button className="kyper-btn primary" aria-disabled="true">*/}
+        {/*  Primary*/}
+        {/*</button>*/}
+        {/*<Highlight*/}
+        {/*  {...defaultProps}*/}
+        {/*  theme={dracula}*/}
+        {/*  code={primaryDisabled}*/}
+        {/*  language="jsx"*/}
+        {/*>*/}
+        {/*  {({ className, style, tokens, getLineProps, getTokenProps }) => (*/}
+        {/*    <pre className={className} style={style}>*/}
+        {/*      {tokens.map((line, i) => (*/}
+        {/*        <div key={i} {...getLineProps({ line, key: i })}>*/}
+        {/*          {line.map((token, key) => (*/}
+        {/*            <span key={key} {...getTokenProps({ token, key })} />*/}
+        {/*          ))}*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </pre>*/}
+        {/*  )}*/}
+        {/*</Highlight>*/}
+
         <button className="kyper-btn neutral">Neutral</button>
         <Highlight
           {...defaultProps}
@@ -162,55 +195,56 @@ const Home: NextPage = () => {
             </pre>
           )}
         </Highlight>
-        <button className="kyper-btn neutral" aria-disabled="true">
-          Neutral
-        </button>
-        <Highlight
-          {...defaultProps}
-          theme={dracula}
-          code={neutralDisabled}
-          language="jsx"
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
-              {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </pre>
-          )}
-        </Highlight>
 
-        <button className="kyper-btn neutral icon">
-          Neutral
-          <svg>
-            <path
-              d="M15.58 2H.42a.419.419 0 00-.42.42v8.423c0 .234.19.42.42.42h7.16v2.525H4.213a.419.419 0 100 .84h7.58a.419.419 0 100-.84H8.42v-2.525h7.16c.235 0 .42-.19.42-.42v-8.42A.422.422 0 0015.58 2zm-.419 8.423H.84v-7.58h14.318v7.58h.003z"
-              fill="blue"
-            />
-          </svg>
-        </button>
-        <Highlight
-          {...defaultProps}
-          theme={dracula}
-          code={neutralIcon}
-          language="jsx"
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
-              {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </pre>
-          )}
-        </Highlight>
+        {/*<button className="kyper-btn neutral" aria-disabled="true">*/}
+        {/*  Neutral*/}
+        {/*</button>*/}
+        {/*<Highlight*/}
+        {/*  {...defaultProps}*/}
+        {/*  theme={dracula}*/}
+        {/*  code={neutralDisabled}*/}
+        {/*  language="jsx"*/}
+        {/*>*/}
+        {/*  {({ className, style, tokens, getLineProps, getTokenProps }) => (*/}
+        {/*    <pre className={className} style={style}>*/}
+        {/*      {tokens.map((line, i) => (*/}
+        {/*        <div key={i} {...getLineProps({ line, key: i })}>*/}
+        {/*          {line.map((token, key) => (*/}
+        {/*            <span key={key} {...getTokenProps({ token, key })} />*/}
+        {/*          ))}*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </pre>*/}
+        {/*  )}*/}
+        {/*</Highlight>*/}
+
+        {/*<button className="kyper-btn neutral icon">*/}
+        {/*  Neutral*/}
+        {/*  <svg>*/}
+        {/*    <path*/}
+        {/*      d="M15.58 2H.42a.419.419 0 00-.42.42v8.423c0 .234.19.42.42.42h7.16v2.525H4.213a.419.419 0 100 .84h7.58a.419.419 0 100-.84H8.42v-2.525h7.16c.235 0 .42-.19.42-.42v-8.42A.422.422 0 0015.58 2zm-.419 8.423H.84v-7.58h14.318v7.58h.003z"*/}
+        {/*      fill="blue"*/}
+        {/*    />*/}
+        {/*  </svg>*/}
+        {/*</button>*/}
+        {/*<Highlight*/}
+        {/*  {...defaultProps}*/}
+        {/*  theme={dracula}*/}
+        {/*  code={neutralIcon}*/}
+        {/*  language="jsx"*/}
+        {/*>*/}
+        {/*  {({ className, style, tokens, getLineProps, getTokenProps }) => (*/}
+        {/*    <pre className={className} style={style}>*/}
+        {/*      {tokens.map((line, i) => (*/}
+        {/*        <div key={i} {...getLineProps({ line, key: i })}>*/}
+        {/*          {line.map((token, key) => (*/}
+        {/*            <span key={key} {...getTokenProps({ token, key })} />*/}
+        {/*          ))}*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </pre>*/}
+        {/*  )}*/}
+        {/*</Highlight>*/}
 
         <button className="kyper-btn transparent">Transparent</button>
         <Highlight
@@ -231,27 +265,28 @@ const Home: NextPage = () => {
             </pre>
           )}
         </Highlight>
-        <button className="kyper-btn transparent" aria-disabled="true">
-          Transparent
-        </button>
-        <Highlight
-          {...defaultProps}
-          theme={dracula}
-          code={transparentDisabled}
-          language="jsx"
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
-              {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </pre>
-          )}
-        </Highlight>
+
+        {/*<button className="kyper-btn transparent" aria-disabled="true">*/}
+        {/*  Transparent*/}
+        {/*</button>*/}
+        {/*<Highlight*/}
+        {/*  {...defaultProps}*/}
+        {/*  theme={dracula}*/}
+        {/*  code={transparentDisabled}*/}
+        {/*  language="jsx"*/}
+        {/*>*/}
+        {/*  {({ className, style, tokens, getLineProps, getTokenProps }) => (*/}
+        {/*    <pre className={className} style={style}>*/}
+        {/*      {tokens.map((line, i) => (*/}
+        {/*        <div key={i} {...getLineProps({ line, key: i })}>*/}
+        {/*          {line.map((token, key) => (*/}
+        {/*            <span key={key} {...getTokenProps({ token, key })} />*/}
+        {/*          ))}*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </pre>*/}
+        {/*  )}*/}
+        {/*</Highlight>*/}
 
         <button className="kyper-btn destructive">Destructive</button>
         <Highlight
@@ -272,27 +307,28 @@ const Home: NextPage = () => {
             </pre>
           )}
         </Highlight>
-        <button className="kyper-btn destructive" aria-disabled="true">
-          Destructive
-        </button>
-        <Highlight
-          {...defaultProps}
-          theme={dracula}
-          code={destructiveDisabled}
-          language="jsx"
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
-              {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </pre>
-          )}
-        </Highlight>
+
+        {/*<button className="kyper-btn destructive" aria-disabled="true">*/}
+        {/*  Destructive*/}
+        {/*</button>*/}
+        {/*<Highlight*/}
+        {/*  {...defaultProps}*/}
+        {/*  theme={dracula}*/}
+        {/*  code={destructiveDisabled}*/}
+        {/*  language="jsx"*/}
+        {/*>*/}
+        {/*  {({ className, style, tokens, getLineProps, getTokenProps }) => (*/}
+        {/*    <pre className={className} style={style}>*/}
+        {/*      {tokens.map((line, i) => (*/}
+        {/*        <div key={i} {...getLineProps({ line, key: i })}>*/}
+        {/*          {line.map((token, key) => (*/}
+        {/*            <span key={key} {...getTokenProps({ token, key })} />*/}
+        {/*          ))}*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </pre>*/}
+        {/*  )}*/}
+        {/*</Highlight>*/}
       </main>
     </div>
   );

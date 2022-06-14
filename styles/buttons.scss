@@ -1,11 +1,14 @@
 .kyper-btn {
   margin: var(--spacing-small);
+  display: flex;
+  gap: var(--spacing-x-small);
+  align-items: center;
   width: fit-content;
   height: fit-content;
   padding: var(--spacing-small) var(--spacing-medium);
   font-weight: var(--font-weight-semibold);
   border-radius: var(--border-radius-medium);
-  transition: all var(--easing-default) var(--time-hyper);
+  transition: all var(--easing-default) var(--time-short);
 
   &.primary {
     background: var(--color-primary-300);
@@ -62,10 +65,6 @@
   }
 
   &.icon {
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    grid-column-gap: var(--spacing-x-small);
     & svg {
       width: 16px;
       height: 16px;
