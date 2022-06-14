@@ -19,7 +19,7 @@ const primaryIcon = `
 `;
 
 const primaryDisabled = `
-<button class="kyper-btn primary icon" disabled>
+<button class="kyper-btn primary icon" aria-disabled='true'>
    Primary
 </button>
 `;
@@ -30,7 +30,7 @@ const neutral = `
 </button>
 `;
 const neutralDisabled = `
-<button class="kyper-btn neutral" disabled>
+<button class="kyper-btn neutral" aria-disabled='true'>
    Neutral
 </button>
 `;
@@ -47,7 +47,7 @@ const transparent = `
 </button>
 `;
 const transparentDisabled = `
-<button className="kyper-btn transparent" disabled>
+<button className="kyper-btn transparent" aria-disabled='true'>
   Neutral
 </button>
 `;
@@ -59,7 +59,7 @@ const destructive = `
 `;
 
 const destructiveDisabled = `
-<button className="kyper-btn destructive" disabled>
+<button className="kyper-btn destructive" aria-disabled="true">
   Neutral
 </button>
 `;
@@ -85,9 +85,9 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
@@ -113,16 +113,16 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
             </pre>
           )}
         </Highlight>
-        <button className="kyper-btn primary" disabled>
+        <button className="kyper-btn primary" aria-disabled="true">
           Primary
         </button>
         <Highlight
@@ -134,9 +134,9 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
@@ -153,16 +153,16 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
             </pre>
           )}
         </Highlight>
-        <button className="kyper-btn neutral" disabled>
+        <button className="kyper-btn neutral" aria-disabled="true">
           Neutral
         </button>
         <Highlight
@@ -174,9 +174,9 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
@@ -202,9 +202,9 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
@@ -222,16 +222,16 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
             </pre>
           )}
         </Highlight>
-        <button className="kyper-btn transparent" disabled>
+        <button className="kyper-btn transparent" aria-disabled="true">
           Transparent
         </button>
         <Highlight
@@ -243,9 +243,9 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
@@ -263,16 +263,16 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}
             </pre>
           )}
         </Highlight>
-        <button className="kyper-btn destructive" disabled>
+        <button className="kyper-btn destructive" aria-disabled="true">
           Destructive
         </button>
         <Highlight
@@ -284,9 +284,9 @@ const Home: NextPage = () => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre className={className} style={style}>
               {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
+                    <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>
               ))}

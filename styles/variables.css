@@ -1,0 +1,172 @@
+:root {
+  /*Colors*/
+  --color-white: #ffffff;
+  --color-black: #121417;
+
+  --color-primary-100: #eaf1fb;
+  --color-primary-200: #6fa1ec;
+  --color-primary-300: #2c64ef;
+  --color-primary-400: #165ecc;
+  --color-primary-500: #034ab3;
+
+  --color-neutral-100: #f8f9fb;
+  --color-neutral-200: #eef1f6;
+  --color-neutral-300: #e4e8ee;
+  --color-neutral-400: #cdd3dd;
+  --color-neutral-500: #a8b1bd;
+  --color-neutral-600: #6a7381;
+  --color-neutral-700: #49505a;
+  --color-neutral-800: #1f2329;
+  --color-neutral-900: #121417;
+
+  --color-success-100: #ddfded;
+  --color-success-200: #0ac295;
+  --color-success-300: #09a57f;
+  --color-success-400: #078364;
+  --color-success-500: #027357;
+
+  --color-warning-100: #fef7b9;
+  --color-warning-200: #ffda6c;
+  --color-warning-300: #ffb400;
+  --color-warning-400: #e07c02;
+  --color-warning-500: #c33e01;
+
+  --color-error-100: #fcd2cf;
+  --color-error-200: #f45532;
+  --color-error-300: #df320c;
+  --color-error-400: #c61a0b;
+  --color-error-500: #ae0a0a;
+
+  --colors-category-auto-transport: #4b9dbc;
+  --colors-category-bills-utilities: #ef8b2c;
+  --colors-category-business-services: #b3de8c;
+  --colors-category-education: #f8ab3a;
+  --colors-category-entertainment: #ab5b89;
+  --colors-category-fees-charges: #ff9696;
+  --colors-category-financial: #6bcddb;
+  --colors-category-food-dining: #58ac7b;
+  --colors-category-gifts-donations: #347aa5;
+  --colors-category-health-fitness: #5c446e;
+  --colors-category-home: #ffd84d;
+  --colors-category-income: #133f49;
+  --colors-category-investments: #ff7070;
+  --colors-category-kids: #82d196;
+  --colors-category-personal-care: #338b7a;
+  --colors-category-pets: #615bab;
+  --colors-category-shopping: #cf5f84;
+  --colors-category-taxes: #32588d;
+  --colors-category-transfer: #959ca6;
+  --colors-category-travel: #e37434;
+  --colors-category-uncategorized: #fa5555;
+  --colors-chart-100: #74e4da;
+  --colors-chart-200: #ed64a4;
+  --colors-chart-300: #f3dc46;
+  --colors-chart-400: #babfc5;
+  --colors-chart-500: #60a9ff;
+  --colors-chart-600: #c8baee;
+  --colors-chart-700: #585e67;
+  --colors-chart-mono-100: #89e8df;
+  --colors-chart-mono-200: #ff8787;
+  --colors-chart-mono-300: #60a9ff;
+  --colors-chart-mono-400: #2f73da;
+  --colors-chart-mono-500: #034ab3;
+  --colors-chart-mono-600: #002966;
+
+  --color-transparent-neutral100: rgba(247, 249, 252, 0.55);
+  --color-transparent-neutral-400: rgba(203, 211, 223, 0.55);
+  --color-transparent-scrim: rgba(0, 0, 0, 0.25);
+  --color-transparent-scrim-darker: rgba(0, 0, 0, 0.5);
+
+  /*Font*/
+  --font-regular: ProximaNovaRegular, Helvetica, Arial, sans-serif;
+  --font-semibold: ProximaNovaSemibold, Helvetica, Arial, sans-serif;
+  --font-bold: ProximaNovaBold, Helvetica, Arial, sans-serif;
+
+  /*Box Shadow*/
+  --box-shadow-low: 0px 2px 8px rgba(106, 115, 129, 0.12);
+  --box-shadow-medium: 0px 6px 12px rgba(106, 115, 129, 0.16),
+    0px 3px 8px rgba(87, 102, 117, 0.06);
+  --box-shadow-high: 0px 12px 20px rgba(106, 115, 129, 0.22);
+  --box-shadow-top: 0px -2px 8px rgba(106, 115, 129, 0.12);
+  --box-shadow-left: -1px 2px 8px rgba(106, 115, 129, 0.22);
+  --box-shadow-right: 1px 0px 8px rgba(106, 115, 129, 0.22);
+  --box-shadow-focus: 0px 0px 0px 2px rgba(82, 138, 224, 0.8);
+
+  /*Border Radius*/
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-large: 8px;
+  --border-radius-x-large: 16px;
+
+  /*Font Size*/
+  --font-size-tiny: 10px;
+  --font-size-x-small: 12px;
+  --font-size-small: 14px;
+  --font-size-paragraph-small: 14px;
+  --font-size-body: 16px;
+  --font-size-paragraph: 16px;
+  --font-size-h3: 20px;
+  --font-size-h2: 24px;
+  --font-size-h1: 32px;
+
+  /*Font Weight*/
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /*Line Height*/
+  --line-height-tiny: 12px;
+  --line-height-x-small: 14px;
+  --line-height-small: 16px;
+  --line-height-paragraph-small: 20px;
+  --line-height-body: 20px;
+  --line-height-paragraph: 24px;
+  --line-height-h3: 24px;
+  --line-height-h2: 32px;
+  --line-height-h1: 40px;
+
+  /*Spacing*/
+  --spacing-x-tiny: 2px;
+  --spacing-tiny: 4px;
+  --spacing-x-small: 8px;
+  --spacing-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-x-Large: 32px;
+  --spacing-xx-Large: 40px;
+  --spacing-xxx-Large: 48px;
+  --spacing-jumbo: 64px;
+  --spacing-superJumbo: 96px;
+
+  /*Time*/
+  --time-hyper: 100ms;
+  --time-short: 300ms;
+  --time-med: 500ms;
+  --time-long: 1000ms;
+
+  /*Easing*/
+  --easing-default: cubic-bezier(0.475, 0.425, 0, 0.995);
+
+  /*Z Index*/
+  --z-index-send-to-back: -1;
+  --z-index-base: 0;
+  --z-index-hover: 1;
+  --z-index-active: 2;
+  --z-index-focus: 3;
+  --z-index-overlay-100: 1000;
+  --z-index-overlay-200: 2000;
+  --z-index-overlay-300: 3000;
+  --z-index-overlay-400: 4000;
+  --z-index-overlay-500: 5000;
+  --z-index-overlay-600: 6000;
+  --z-index-overlay-700: 7000;
+  --z-index-overlay-800: 8000;
+  --z-index-overlay-900: 9000;
+  --z-index-overlay-1000: 10000;
+
+  /*Resolution*/
+  --resolution-small: 576px;
+  --resolution-med: 768px;
+  --resolution-large: 992px;
+  --resolution-x-large: 1200px;
+}
